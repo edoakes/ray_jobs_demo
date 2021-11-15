@@ -2,6 +2,6 @@ name: "feature_preprocessing"
 description: "Preprocessing features for ML training."
 cloud: anyscale_k8s_gcp_cloud
 cluster_env: eoakes-nightly-jobs:5
-entrypoint: TODO
+entrypoint: python preprocess.py
 runtime_env:
-  working_dir: TODO
+  working_dir: https://github.com/edoakes/ray_jobs_demo/archive/refs/heads/master.zip
