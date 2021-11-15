@@ -187,7 +187,7 @@ if __name__ == "__main__":
             "epochs": args.num_epochs,
             "test_mode": args.smoke_test  # whether to to subset the data
         },
-        stop={"training_iteration": 2 if args.smoke_test else 100},
+        stop={"training_iteration": 2 if args.smoke_test else 10},
         max_failures=3,  # used for fault tolerance
         checkpoint_freq=3,  # used for fault tolerance
         keep_checkpoints_num=1,  # used for fault tolerance
