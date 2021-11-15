@@ -17,7 +17,7 @@ print("Doing feature preprocessing.")
 ds = ray.data.range(10 if SMOKE_TEST else 100000000)
 ds = ds.map(lambda x: x * 2)
 
-extra_time = 30 - (time.time() - start)
+extra_time = 60 - (time.time() - start)
 if not SMOKE_TEST:
     time.sleep(max(0, extra_time))
 
