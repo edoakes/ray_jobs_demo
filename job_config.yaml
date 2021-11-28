@@ -1,7 +1,9 @@
-name: "feature_preprocessing"
-description: "Preprocessing features for ML training."
+name: "eoakes_test"
+description: "Pls work *pray*"
 cloud: anyscale_k8s_gcp_cloud
-cluster_env: eoakes-nightly-jobs:5
-entrypoint: TODO
+cluster_env: eoakes-nightly-jobs:8
+entrypoint: python -c "import ray;ray.init();import pip_install_test"
 runtime_env:
-  working_dir: TODO
+  working_dir: https://github.com/edoakes/ray_jobs_demo/archive/refs/heads/master.zip
+  pip: ./requirements.txt
+max_retries: 1
