@@ -1,0 +1,8 @@
+name: serve-counter
+description: Counter deployed with Ray Serve
+cloud: anyscale_k8s_gcp_cloud
+cluster_env: eoakes-nightly-jobs:8
+entrypoint: python deploy_counter.py --max-count 10
+healthcheck_url: /healthz
+runtime_env:
+  working_dir: https://github.com/edoakes/ray_jobs_demo/archive/refs/heads/master.zip
